@@ -17,6 +17,7 @@
     <artifactId>exe</artifactId>
 
     <build>
+        <finalName>dictionary</finalName>
         <resources>
             <resource>
                 <directory>src/main/webapp</directory>
@@ -34,9 +35,37 @@
                     <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <finalName>WebXlsFileViewer-${project.version}</finalName>
+                    <archive>
+                        <manifest>
+                            <mainClass>exe.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>ru.k0r0r0tk0ff</groupId>
+            <artifactId>parser</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>
