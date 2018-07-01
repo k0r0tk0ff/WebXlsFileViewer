@@ -1,8 +1,10 @@
 package servlets;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
+@WebFilter (value = "/MainServlet")
 public class Utf8PostReqFilter implements Filter{
     private static final String FILTERABLE_CONTENT_TYPE="application/x-www-form-urlencoded";
 

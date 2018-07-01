@@ -13,14 +13,14 @@
 
 <div class="container">
     <h1>XLS file viewer</h1>
-    <form id="translateform" action="viewer" method="post" class="form-horizontal" role="form">
+    <form id="translateform" action="MainServlet" method="post" class="form-horizontal" role="form">
         <div style="margin-bottom: 25px" class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-            <input id="wordForTranslate"
-                   type="wordForTranslate"
+            <input id="MainServlet"
+                   type="MainServlet"
                    class="form-control"
-                   name="wordForTranslate"
-                   placeholder="wordForTranslate">
+                   name="MainServlet"
+                   placeholder="MainServlet">
         </div>
 
         <div style="margin-top:10px" class="form-group">
