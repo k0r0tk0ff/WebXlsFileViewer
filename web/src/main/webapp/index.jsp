@@ -1,3 +1,4 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -13,31 +14,6 @@
 
 <div class="container">
     <h1>XLS file viewer</h1>
-
-
-<%--    <form id="translateform" action="MainServlet" method="post" class="form-horizontal" role="form">
-        <div style="margin-bottom: 25px" class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-            <input id="MainServlet"
-                   type="MainServlet"
-                   class="form-control"
-                   name="MainServlet"
-                   placeholder="MainServlet">
-        </div>
-
-        <div style="margin-top:10px" class="form-group">
-            <div class="col-sm-12 controls">
-                <input type="submit" class="btn btn-default pull-right" value="Translate">
-            </div>
-        </div>
-
-        <div class="panel panel-info">
-            <div class="panel-heading">Translated word</div>
-            <div class="panel-body"><c:out value="${result}"/></div>
-        </div>
-    </form>--%>
-
-
 <%--    <div class="container">
         <h2>Striped Rows</h2>
         <p>The .table-striped class adds zebra-stripes to a table:</p>
@@ -78,15 +54,15 @@
             <th>Salary</th>
         </tr>
         </thead>
-        <tr>
-            <c:forEach var="list" items="${lists}">
-                <td>
-                    <c:forEach var="element" items="${list}">
-                        <c:out value="${element}"/>
-                    </c:forEach>
-                </td>
-            </c:forEach>
-        </tr>
+        <c:forEach var="list" items="${lists}">
+            <tr valign="top">
+            </tr>
+            <tr>
+                <c:forEach var="element" items="${list}">
+                    <td><c:out value="${element}"/></td>
+                </c:forEach>
+            </tr>
+        </c:forEach>
         </tbody>
     </table>
 </div>
