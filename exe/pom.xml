@@ -41,11 +41,11 @@
     </dependencies>
 
     <build>
-        <finalName>dictionary</finalName>
+        <finalName>WebXlsFileViewer</finalName>
         <resources>
             <resource>
-                <directory>src/main/webapp</directory>
-                <targetPath>META-INF/resources</targetPath>
+                <directory>src/main/resources</directory>
+                <targetPath></targetPath>
             </resource>
         </resources>
         <plugins>
