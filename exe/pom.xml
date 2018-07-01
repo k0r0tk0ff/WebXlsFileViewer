@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>ru.k0r0r0tk0ff</groupId>
-            <artifactId>parser</artifactId>
+            <artifactId>utils</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <!-- LOG-->

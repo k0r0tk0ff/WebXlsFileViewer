@@ -38,8 +38,6 @@
         </plugins>
     </build>
 
-
-
     <dependencies>
         <dependency>
             <groupId>ru.k0r0r0tk0ff</groupId>
@@ -107,6 +105,5 @@
             <artifactId>tomcat-jsp-api</artifactId>
             <version>${tomcat.version}</version>
         </dependency>
-
     </dependencies>
 </project>
