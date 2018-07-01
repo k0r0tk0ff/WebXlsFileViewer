@@ -13,7 +13,9 @@
 
 <div class="container">
     <h1>XLS file viewer</h1>
-    <form id="translateform" action="MainServlet" method="post" class="form-horizontal" role="form">
+
+
+<%--    <form id="translateform" action="MainServlet" method="post" class="form-horizontal" role="form">
         <div style="margin-bottom: 25px" class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
             <input id="MainServlet"
@@ -33,9 +35,10 @@
             <div class="panel-heading">Translated word</div>
             <div class="panel-body"><c:out value="${result}"/></div>
         </div>
-    </form>
+    </form>--%>
 
-    <div class="container">
+
+<%--    <div class="container">
         <h2>Striped Rows</h2>
         <p>The .table-striped class adds zebra-stripes to a table:</p>
         <table class="table table-striped">
@@ -64,8 +67,28 @@
             </tr>
             </tbody>
         </table>
-    </div>
+    </div>--%>
 
+
+    <table class="table table-striped">
+        <tbody>
+        <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Salary</th>
+        </tr>
+        </thead>
+        <tr>
+            <c:forEach var="list" items="${lists}">
+                <td>
+                    <c:forEach var="element" items="${list}">
+                        <c:out value="${element}"/>
+                    </c:forEach>
+                </td>
+            </c:forEach>
+        </tr>
+        </tbody>
+    </table>
 </div>
 </body>
 </html>

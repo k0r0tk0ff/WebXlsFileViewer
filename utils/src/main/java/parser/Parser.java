@@ -11,16 +11,19 @@ import org.slf4j.LoggerFactory;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class Parser {
 
     private static final Logger LOG = LoggerFactory.getLogger(Parser.class);
 
-    public String parse(String pathToFile) throws IOException {
-        String result = "";
+    public ArrayList<ArrayList<String>> parse(String pathToFile) throws IOException {
+        //String result = "";
         InputStream inputStream = null;
         HSSFWorkbook workbook = null;
+        ArrayList<ArrayList<String>> list = new ArrayList<>();
 
         inputStream = new FileInputStream(pathToFile);
         workbook = new HSSFWorkbook(inputStream);
@@ -31,25 +34,29 @@ public class Parser {
             Row row = it.next();
             for (Cell cell : row) {
                 Enum cellType = cell.getCellTypeEnum();
+                ArrayList<String> arrayList = new ArrayList<>();
                 switch (cellType.toString()) {
                     case "STRING":
-                        result += cell.getStringCellValue() + " = ";
+                        arrayList.add(cell.getStringCellValue());
+                        //result += cell.getStringCellValue() + " = ";
                         break;
                     case "NUMERIC":
-                        result += "[" + cell.getNumericCellValue() + "]";
+                        arrayList.add(String.valueOf(cell.getNumericCellValue()));
+                        //result += "[" + cell.getNumericCellValue() + "]";
                         break;
                     default:
-                        result += "|";
+                        //result += "|";
                         break;
                 }
+                list.add(arrayList);
             }
-            result += "\n";
+            //result += "\n";
 
         }
 
         LOG.debug("Parse success");
 
-        return result;
+        return list;
 
     }
 }
