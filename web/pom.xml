@@ -39,11 +39,11 @@
     </build>
 
     <dependencies>
-        <dependency>
+<!--        <dependency>
             <groupId>ru.k0r0r0tk0ff</groupId>
             <artifactId>yandex</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
         <!-- start for JTLS -->
         <!-- https://mvnrepository.com/artifact/jstl/jstl -->
         <dependency>
